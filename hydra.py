@@ -1,4 +1,15 @@
-import ctypes  # An included library with Python install.
-def Mbox(title, text, style):
-    return ctypes.windll.user32.MessageBoxW(0, text, title, style)
-Mbox('Your title', 'Your text', 1)
+#!/usr/bin/env python
+
+from Tkinter import *
+import tkMessageBox
+
+window = Tk()
+window.wm_withdraw()
+
+#message at x:200,y:200
+window.geometry("1x1+200+200")#remember its .geometry("WidthxHeight(+or-)X(+or-)Y")
+tkMessageBox.showerror(title="error",message="Error Message",parent=window)
+
+#centre screen message
+window.geometry("1x1+"+str(window.winfo_screenwidth()/2)+"+"+str(window.winfo_screenheight()/2))
+tkMessageBox.showinfo(title="Greetings", message="Hello World!")
