@@ -6,10 +6,12 @@ import tkMessageBox
 window = Tk()
 window.wm_withdraw()
 
-#message at x:200,y:200
-window.geometry("1x1+200+200")#remember its .geometry("WidthxHeight(+or-)X(+or-)Y")
-tkMessageBox.showerror(title="error",message="Error Message",parent=window)
-
 #centre screen message
 window.geometry("1x1+"+str(window.winfo_screenwidth()/2)+"+"+str(window.winfo_screenheight()/2))
-tkMessageBox.showinfo(title="Greetings", message="Hello World!")
+tkMessageBox.showinfo(title="Hydra", message="Cut one head off, two more will grow back.")
+
+def onclick():
+    window.geometry("1x1+"+str(window.winfo_screenwidth()/2)+"+"+str(window.winfo_screenheight()/2))
+    tkMessageBox.showinfo(title="Hydra", message="Cut one head off, two more will grow back.")
+    window.geometry("1x1+"+str(window.winfo_screenwidth()/2)+"+"+str(window.winfo_screenheight()/2))
+    tkMessageBox.showinfo(title="Hydra", message="Cut one head off, two more will grow back.")
